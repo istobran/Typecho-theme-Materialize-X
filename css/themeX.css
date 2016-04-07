@@ -212,7 +212,7 @@ li {
 }
 .postlist nav {
   z-index: 3;
-  color: #34495e;
+  color: #0B575B;
 }
 .postlist nav a {
   width: 35px;
@@ -334,7 +334,7 @@ article.post-body {
   font-size: 0;
 }
 .author-name a {
-  color: #B5292A;
+  color: #961512;
   line-height: 40px;
   display: inline-block;
   vertical-align:top;
@@ -467,7 +467,7 @@ footer .container>div {
   font-size: 28px;
   line-height: 36px;
   text-align: center;
-  color: #34495e;
+  color: #0B575B;
   font-family: "Microsoft YaHei";
   font-weight: bold;
 }
@@ -501,6 +501,10 @@ footer .container>div {
   margin-top: 15px;
 }
 .group-item ul li a {
+  padding: 8px 35px;
+  display: block;
+}
+.group-item ul li a:hover {
   padding: 8px 35px;
   display: block;
 }
