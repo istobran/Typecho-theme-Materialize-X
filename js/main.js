@@ -128,16 +128,6 @@ $("#menu").click(function() {
 
 // 添加 Material Design 水波纹点按效果
 var ripple_effect = (function() {
-    var findPos = function(obj) {
-      var curleft = curtop = 0;
-      if (obj.offsetParent)
-      do {
-          curleft += obj.offsetLeft;
-          curtop += obj.offsetTop;
-      } while (obj = obj.offsetParent);
-
-      return [curleft,curtop];
-  };
   var addRippleEffect = function (e) {
       var target = e.target;
       if (!target.classList.contains("reffect")) return false;
@@ -150,8 +140,10 @@ var ripple_effect = (function() {
           target.appendChild(ripple);
       }
       ripple.classList.remove('show');
-      var top = rect.top - ripple.offsetHeight / 2;
-      var left = e.pageX - rect.left - ripple.offsetWidth / 2;
+      var top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
+      var left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
+      // var top = rect.top - ripple.offsetHeight / 2;
+      // var left = e.pageX - rect.left - ripple.offsetWidth / 2;
       ripple.style.top = top + 'px';
       ripple.style.left = left + 'px';
       ripple.classList.add('show');

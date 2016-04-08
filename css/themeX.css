@@ -501,8 +501,10 @@ footer .container>div {
   margin-top: 15px;
 }
 .group-item ul li a {
+  position: relative;
   padding: 8px 35px;
   display: block;
+  overflow: hidden;
 }
 .group-item ul li a:hover {
   padding: 8px 35px;
@@ -514,7 +516,7 @@ footer .container>div {
 }
 .ripple {
   position: absolute;
-  background: rgba(0,0,0,.15);
+  background: rgba(77, 149, 152, .95);
   border-radius: 100%;
   transform: scale(0);
   pointer-events: none;
