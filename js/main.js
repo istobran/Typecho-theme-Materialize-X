@@ -125,3 +125,43 @@ $("#menu").click(function() {
   $(".postlist").toggleClass("post-full");   // 文章列表区向右收缩
   $("footer").toggleClass("post-full");   // 尾部版权区向右收缩
 });
+
+// 添加 Material Design 水波纹点按效果
+var ripple_effect = (function() {
+    var findPos = function(obj) {
+      var curleft = curtop = 0;
+      if (obj.offsetParent)
+      do {
+          curleft += obj.offsetLeft;
+          curtop += obj.offsetTop;
+      } while (obj = obj.offsetParent);
+
+      return [curleft,curtop];
+  };
+  var addRippleEffect = function (e) {
+      var target = e.target;
+      if (!target.classList.contains("reffect")) return false;
+      var rect = target.getBoundingClientRect();
+      var ripple = target.querySelector('.ripple');
+      if (!ripple) {
+          ripple = document.createElement('span');
+          ripple.className = 'ripple';
+          ripple.style.height = ripple.style.width = Math.max(rect.width, rect.height) + 'px';
+          target.appendChild(ripple);
+      }
+      ripple.classList.remove('show');
+      var top = rect.top - ripple.offsetHeight / 2;
+      var left = e.pageX - rect.left - ripple.offsetWidth / 2;
+      ripple.style.top = top + 'px';
+      ripple.style.left = left + 'px';
+      ripple.classList.add('show');
+      return false;
+  };
+
+  return {
+    start : function() {
+      document.addEventListener('click', addRippleEffect, false);
+    }
+  };
+}());
+ripple_effect.start();

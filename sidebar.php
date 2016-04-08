@@ -15,7 +15,7 @@
       <ul>
         <?php while ($categorys->next()): ?>
         <li <?php if ($this->is('category', $categorys->slug)): ?> class="active"<?php endif;?> >
-          <a href="<?php $categorys->permalink();?>" title="<?php $categorys->name();?>"><?php if ($this->is('category', $categorys->slug)): ?><i class="fa fa-arrow-right"></i> <?php endif;?><?php $categorys->name();?></a>
+          <a class="easeChange reffect" href="<?php $categorys->permalink();?>" title="<?php $categorys->name();?>"><?php if ($this->is('category', $categorys->slug)): ?><i class="fa fa-arrow-right"></i> <?php endif;?><?php $categorys->name();?></a>
         </li>
         <?php endwhile;?>
       </ul>
@@ -31,7 +31,7 @@
       <ul>
         <?php while ($pages->next()): ?>
         <li <?php if ($this->is('page', $pages->slug)): ?> class="active"<?php endif;?> >
-          <a href="<?php $pages->permalink();?>" title="<?php $pages->title();?>"><?php if ($this->is('page', $pages->slug)): ?><i class="fa fa-arrow-right"></i> <?php endif;?><?php $pages->title();?></a>
+          <a class="easeChange reffect" href="<?php $pages->permalink();?>" title="<?php $pages->title();?>"><?php if ($this->is('page', $pages->slug)): ?><i class="fa fa-arrow-right"></i> <?php endif;?><?php $pages->title();?></a>
         </li>
         <?php endwhile;?>
       </ul>
