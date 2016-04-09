@@ -328,11 +328,6 @@ article.post-body {
   float: right;
   display: inline-block;
 }
-@media (max-width: 1024px) {
-  .author-info {
-    display: none;
-  }
-}
 .author-avatar {
   display: inline-block;
   vertical-align:top;
@@ -519,20 +514,106 @@ footer .container>div {
 .group-item ul li.active a {
   background-color: rgba(225, 225, 225, 0.5);
 }
+@media (max-width: 1024px) {  /* 边栏自适应窗口大小 */
+  .author-info {
+    display: none;
+  }
+  .postlist header {
+    padding: 0;
+  }
+  .postlist nav {
+    padding: 60px 0 0;
+  }
+  #sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 5px 1em;
+    background: #fdfdfd url("http://7xs5jj.com1.z0.glb.clouddn.com/bg04.png") repeat;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    border-right: none;
+    border-bottom: 2px solid #efefef;
+    transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  .sidebar-hide {
+    transform: translateY(-300px) !important;
+    -o-transform: translateY(-300px) !important;
+    -moz-transform: translateY(-300px) !important;
+    -ms-transform: translateY(-300px) !important;
+    -webkit-transform: translateY(-300px) !important;
+  }
+  #sidebar>div {
+    margin: 0 .5em;
+  }
+  .avatar {
+    display: inline-block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+  }
+  .avatar img {
+    width: inherit;
+    height: inherit;
+  }
+  .name {
+    display: inline-block;
+    float: left;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    color: #0B575B;
+    font-family: "Microsoft YaHei";
+    font-weight: bold;
+  }
+  .group-list {
+    margin-top: 0;
+    float: left;
+  }
+  .divider {
+    display: none;
+  }
+  .group-item {
+    display: inline-block;
+    float: left;
+    margin-top: 0;
+  }
+  .group-item ul li {
+    display: inline-block;
+    float: left;
+  }
+  .group-item ul li a {
+    position: relative;
+    padding: 8px 10px;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+  }
+  .group-item ul li a:hover {
+    padding: 8px 16px;
+    display: block;
+    background-color: rgba(225, 225, 225, 0.5);
+  }
+  .group-item ul li.active a {
+    background-color: rgba(225, 225, 225, 0.5);
+  }
+  .postlist, footer {
+    margin-left: 0;
+  }
+}
 .ripple {
   position: absolute;
   background: rgba(77, 149, 152, .95);
   border-radius: 100%;
   transform: scale(0);
   pointer-events: none;
-}
-@media (max-width: 1024px) {  /* 边栏自适应窗口大小 */
-  #sidebar {
-    display: none; /* 待优化 */
-  }
-  .postlist, footer {
-    margin-left: 0;
-  }
 }
 .ripple.show {
   animation: ripple .75s ease-out;

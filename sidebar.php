@@ -1,4 +1,4 @@
-<aside id="sidebar" class="easeChange" <?php if(is_index($this->options->siteUrl)) {_e('style="display:none;"');} ?>>
+<aside id="sidebar" class="easeChange clearfix" <?php if(is_index($this->options->siteUrl)) {_e('style="display:none;"');} ?>>
   <div class="avatar">
     <img src="http://7xs5jj.com1.z0.glb.clouddn.com/logo-min.png" alt="BangZ" width="150" height="150">
   </div>
@@ -6,7 +6,7 @@
     <?php _e("BangZ 梦工厂"); ?>
   </div>
   <?php $this->widget('Widget_Metas_Category_List')->to($categorys);?>
-  <div class="group-list">
+  <div class="group-list clearfix">
     <ul class="divider">
       <li class="header-line"></li>
       <li class="header-text"><span><?php _e("分类导航");?><small><?php _e("（Category）");?></small></span></li>
