@@ -10,7 +10,7 @@ $(".blog-title").addClass("easeOuts");
 $(".blog-description").addClass("easeOuts");
 $(".blog-entrance").addClass("easeOuts");
 var bg_image = new Image();
-bg_image.src = "http://7xs5jj.com1.z0.glb.clouddn.com/bg01.png";
+bg_image.src = "http://static.bangz.me/bg01.png";
 bg_image.onload = function() {
   $(".circleContainer").remove();
   $('.billboard-background').hide();
@@ -157,3 +157,46 @@ var ripple_effect = (function() {
   };
 }());
 ripple_effect.start();
+
+jQuery(document).ready(function(){
+    var $=jQuery;
+        //绑定链接
+    $.pjax({
+        selector: "a[href^='http://iyanlei.com'][href$='.html']",
+        container: '.ajaxdiv', //内容替换的容器
+        show: 'slide',  //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
+        cache: false,  //是否使用缓存
+        storage: true,  //是否使用本地存储
+        titleSuffix: ' | Ray', //标题后缀
+        filter: function(){},
+        callback: function(status){
+            $("#nav-menu").addClass("animated fadeInUp");
+        }
+    });
+        //绑定跳转开始事件
+    $(".ajaxdiv").bind("pjax.start",
+         function() {
+            $(".ajaxdiv").css("opacity","0.6");
+            $(".spinner").css("opacity","1");
+            $(".spinner").show();
+
+     });
+        //绑定跳转结束事件
+    $(".ajaxdiv").bind("pjax.end",
+         function() {
+            $(".spinner").hide();
+            $(".ajaxdiv").css("opacity","1");
+            // Main
+            initHeader();
+            addListeners();
+            if (navigator.userAgent.indexOf('Firefox') >= 0){
+                document.documentElement.scrollTop=120;
+            }
+            else
+            {
+               $('body').animate({scrollTop: 120});
+            }
+
+     });
+
+});

@@ -1,3 +1,4 @@
+<?php if (!is_pjax()) { ?>
 <!DOCTYPE html>
 <html lang="zh-cn" class="han-la">
   <head>
@@ -20,3 +21,4 @@
   <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+<?php } ?>

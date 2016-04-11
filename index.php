@@ -1,3 +1,4 @@
+
 <?php
 /**
  * 基于 Typecho 1.0 的 Bootstrap 模板
@@ -6,6 +7,7 @@
  * @version 1.0
  * @link http://bangz.me/
  */
+if (!is_pjax()) {
 $this->need("header.php");
 ?>
 
@@ -46,4 +48,5 @@ $this->need("header.php");
 <?php $this->need("archive.php"); ?>
 <?php
 $this->need("footer.php");
+}
 ?>

@@ -4,6 +4,7 @@
     * <?php $this->viewsNum(); ?>
     * 插件源地址：http://lixianhua.com/typecho_viewsnum_plugin.html
   */
+  if (!is_pjax()) {
 ?>
 <?php if (!$this->is('index')): ?>
   <?php $this->need("header.php"); ?>
@@ -59,3 +60,4 @@
 <?php if (!$this->is('index')): ?>
   <?php $this->need("footer.php"); ?>
 <?php endif;?>
+<?php } ?>

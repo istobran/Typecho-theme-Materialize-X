@@ -1,3 +1,4 @@
+<?php if (!is_pjax()) { ?>
   <footer <?php if(is_index($this->options->siteUrl)) {_e('style="display:none;"');} ?>>
     <div class="container">
       <div class="support">
@@ -27,3 +28,4 @@
   <script type="text/javascript" src="<?php $this->options->themeUrl('js/text-autospace.min.js');?>"></script>
 </body>
 </html>
+<?php } ?>

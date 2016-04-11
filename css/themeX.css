@@ -1,39 +1,39 @@
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Thin), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Thin.eot");
-  src: url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Thin.woff2") format("woff2"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Thin.woff") format("woff"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Thin.ttf") format("truetype");
+  src: local(Roboto Thin), url("//static.bangz.me/Roboto-Thin.eot");
+  src: url("//static.bangz.me/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("//static.bangz.me/Roboto-Thin.woff2") format("woff2"), url("//static.bangz.me/Roboto-Thin.woff") format("woff"), url("//static.bangz.me/Roboto-Thin.ttf") format("truetype");
   font-weight: 200;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Light), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Light.eot");
-  src: url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Light.woff2") format("woff2"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Light.woff") format("woff"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Light.ttf") format("truetype");
+  src: local(Roboto Light), url("//static.bangz.me/Roboto-Light.eot");
+  src: url("//static.bangz.me/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("//static.bangz.me/Roboto-Light.woff2") format("woff2"), url("//static.bangz.me/Roboto-Light.woff") format("woff"), url("//static.bangz.me/Roboto-Light.ttf") format("truetype");
   font-weight: 300;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Regular), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Regular.eot");
-  src: url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Regular.woff2") format("woff2"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Regular.woff") format("woff"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Regular.ttf") format("truetype");
+  src: local(Roboto Regular), url("//static.bangz.me/Roboto-Regular.eot");
+  src: url("//static.bangz.me/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("//static.bangz.me/Roboto-Regular.woff2") format("woff2"), url("//static.bangz.me/Roboto-Regular.woff") format("woff"), url("//static.bangz.me/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Medium.eot");
-  src: url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Medium.woff2") format("woff2"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Medium.woff") format("woff"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Medium.ttf") format("truetype");
+  src: url("//static.bangz.me/Roboto-Medium.eot");
+  src: url("//static.bangz.me/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("//static.bangz.me/Roboto-Medium.woff2") format("woff2"), url("//static.bangz.me/Roboto-Medium.woff") format("woff"), url("//static.bangz.me/Roboto-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Bold.eot");
-  src: url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Bold.woff2") format("woff2"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Bold.woff") format("woff"), url("//7xs5jj.com1.z0.glb.clouddn.com/Roboto-Bold.ttf") format("truetype");
+  src: url("//static.bangz.me/Roboto-Bold.eot");
+  src: url("//static.bangz.me/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("//static.bangz.me/Roboto-Bold.woff2") format("woff2"), url("//static.bangz.me/Roboto-Bold.woff") format("woff"), url("//static.bangz.me/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 body {
-  background: #f5f5f5 url("http://7xs5jj.com1.z0.glb.clouddn.com/bg03.png") repeat;
+  background: #f5f5f5 url("http://static.bangz.me/bg03.png") repeat;
   font-family: "Microsoft Yahei",Helvetica,Arial,sans-serif;
   margin: 0;
   padding: 0;
@@ -206,8 +206,8 @@ li {
   font-weight: normal;
 }
 .postlist header .container {
-  margin: 2em;
-  padding: 10px;
+  margin: 0 auto;
+  padding: 10px 2em;
   border-bottom: 2px dashed #e2e2e2;
 }
 .postlist nav {
@@ -440,7 +440,7 @@ footer .container>div {
   height: 100%;
   overflow: hidden;
   padding: 36px 0 0;
-  background: #fdfdfd url("http://7xs5jj.com1.z0.glb.clouddn.com/bg04.png") repeat;
+  background: #fdfdfd url("http://static.bangz.me/bg04.png") repeat;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
   border-right: 2px solid #efefef;
   transform: translateX(0);
@@ -532,7 +532,7 @@ footer .container>div {
     height: auto;
     overflow: hidden;
     padding: 5px 1em;
-    background: #fdfdfd url("http://7xs5jj.com1.z0.glb.clouddn.com/bg04.png") repeat;
+    background: #fdfdfd url("http://static.bangz.me/bg04.png") repeat;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
     border-right: none;
     border-bottom: 2px solid #efefef;
