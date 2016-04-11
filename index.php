@@ -23,7 +23,7 @@ $this->need("header.php");
     <div class="billboard-background-mask"></div>
     <div class="billboard-container">
       <div class="logo-container">
-        <img src="http://7xs5jj.com1.z0.glb.clouddn.com/logo-min.png" alt="BangZ Logo" width="200" height="200" />
+        <img src="<?php _e(CDN_URL."logo-min.png");?>" alt="BangZ Logo" width="200" height="200" />
       </div>
       <div class="billboard-text">
         <div class="billboard-text-border-top"></div>

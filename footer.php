@@ -7,7 +7,7 @@
         Theme Materialized-X by BangZ / Powered by <a href="http://typecho.org/">Typecho)))</a>
       </div>
       <div class="lawinfo">
-        &copy; <?php _e(date('Y'))?>&nbsp;<?php $this->options->title()?> 沪ICP备13002172号-3
+        &copy; <?php _e(date('Y'));?>&nbsp;<?php $this->options->title();?> / <?php _e(LAW_INFO); ?>
       </div>
       <div class="social">
         <a href="//github.com/istobran"><i class="fa fa-github"></i></a>
