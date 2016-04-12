@@ -1,6 +1,6 @@
 <aside id="sidebar" class="easeChange clearfix" <?php if(is_index($this->options->siteUrl)) {_e('style="display:none;"');} ?>>
   <div class="avatar">
-    <img src="http://7xs5jj.com1.z0.glb.clouddn.com/logo-min.png" alt="BangZ" width="150" height="150">
+    <img src="<?php _e(cdn("logo-min.png"));?>" alt="BangZ" width="150" height="150">
   </div>
   <div class="name">
     <?php _e("BangZ 梦工厂"); ?>
@@ -15,7 +15,7 @@
       <ul>
         <?php while ($categorys->next()): ?>
         <li <?php if ($this->is('category', $categorys->slug)): ?> class="active"<?php endif;?> >
-          <a class="easeChange reffect" href="<?php $categorys->permalink();?>" title="<?php $categorys->name();?>"><?php if ($this->is('category', $categorys->slug)): ?><i class="fa fa-arrow-right"></i> <?php endif;?><?php $categorys->name();?></a>
+          <a class="easeChange reffect" href="<?php $categorys->permalink();?>" title="<?php $categorys->name();?>"><?php $categorys->name();?></a>
         </li>
         <?php endwhile;?>
       </ul>
@@ -31,7 +31,7 @@
       <ul>
         <?php while ($pages->next()): ?>
         <li <?php if ($this->is('page', $pages->slug)): ?> class="active"<?php endif;?> >
-          <a class="easeChange reffect" href="<?php $pages->permalink();?>" title="<?php $pages->title();?>"><?php if ($this->is('page', $pages->slug)): ?><i class="fa fa-arrow-right"></i> <?php endif;?><?php $pages->title();?></a>
+          <a class="easeChange reffect" href="<?php $pages->permalink();?>" title="<?php $pages->title();?>"><?php $pages->title();?></a>
         </li>
         <?php endwhile;?>
       </ul>

@@ -75,6 +75,11 @@ $("#link-article").click(function() {
   });
 });
 
+// 回到首页
+$(".avatar img").click(function() {
+  location.href="http://bangz.me";
+});
+
 // 文章标题下划线特效
 var u_effect = ( function() {     // 这种闭包方法比前面的 json 方法要好用得多
   var flag = true;   // 使用flag防止打断
@@ -131,6 +136,11 @@ var ripple_effect = (function() {
   var addRippleEffect = function (e) {
       var target = e.target;
       if (!target.classList.contains("reffect")) return false;
+      // 去掉原来选项的选中（active）状态（class），并选中现在的选项
+      if (!target.parentNode.classList.contains("active")) {
+        $(".active").removeClass("active");
+        $(target.parentNode).addClass("active");
+      }
       var rect = target.getBoundingClientRect();
       var ripple = target.querySelector('.ripple');
       if (!ripple) {
@@ -142,8 +152,6 @@ var ripple_effect = (function() {
       ripple.classList.remove('show');
       var top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
       var left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
-      // var top = rect.top - ripple.offsetHeight / 2;
-      // var left = e.pageX - rect.left - ripple.offsetWidth / 2;
       ripple.style.top = top + 'px';
       ripple.style.left = left + 'px';
       ripple.classList.add('show');
@@ -157,46 +165,40 @@ var ripple_effect = (function() {
   };
 }());
 ripple_effect.start();
-
-jQuery(document).ready(function(){
-    var $=jQuery;
-        //绑定链接
+$(document).ready(function(){
+    window.auto_space(window, window.jQuery, undefined);
     $.pjax({
-        selector: "a[href^='http://iyanlei.com'][href$='.html']",
-        container: '.ajaxdiv', //内容替换的容器
+        selector: "a[href^='http://bangz.me']",
+        container: '#pjax-container', //内容替换的容器
         show: 'slide',  //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
         cache: false,  //是否使用缓存
         storage: true,  //是否使用本地存储
-        titleSuffix: ' | Ray', //标题后缀
-        filter: function(){},
         callback: function(status){
-            $("#nav-menu").addClass("animated fadeInUp");
+          u_effect.start();
+          // 重新启用text-autospace
         }
     });
-        //绑定跳转开始事件
-    $(".ajaxdiv").bind("pjax.start",
-         function() {
-            $(".ajaxdiv").css("opacity","0.6");
-            $(".spinner").css("opacity","1");
-            $(".spinner").show();
-
-     });
-        //绑定跳转结束事件
-    $(".ajaxdiv").bind("pjax.end",
-         function() {
-            $(".spinner").hide();
-            $(".ajaxdiv").css("opacity","1");
-            // Main
-            initHeader();
-            addListeners();
-            if (navigator.userAgent.indexOf('Firefox') >= 0){
-                document.documentElement.scrollTop=120;
-            }
-            else
-            {
-               $('body').animate({scrollTop: 120});
-            }
-
-     });
-
+    //绑定跳转开始事件
+    // $(".ajaxdiv").bind("pjax.start",
+    //      function() {
+    //         $(".ajaxdiv").css("opacity","0.6");
+    //         $(".spinner").css("opacity","1");
+    //         $(".spinner").show();
+    //  });
+    //绑定跳转结束事件
+    // $(".ajaxdiv").bind("pjax.end",
+    //      function() {
+    //         $(".spinner").hide();
+    //         $(".ajaxdiv").css("opacity","1");
+    //         // Main
+    //         initHeader();
+    //         addListeners();
+    //         if (navigator.userAgent.indexOf('Firefox') >= 0){
+    //             document.documentElement.scrollTop=120;
+    //         }
+    //         else
+    //         {
+    //            $('body').animate({scrollTop: 120});
+    //         }
+    //  });
 });

@@ -7,10 +7,9 @@
  * @version 1.0
  * @link http://bangz.me/
  */
-if (!is_pjax()) {
 $this->need("header.php");
 ?>
-
+<?php if (!is_pjax()) { ?>
 <?php if (is_index($this->options->siteUrl)): ?>
   <section class="billboard">
     <div class="billboard-background">
@@ -25,7 +24,7 @@ $this->need("header.php");
     <div class="billboard-background-mask"></div>
     <div class="billboard-container">
       <div class="logo-container">
-        <img src="<?php _e(CDN_URL."logo-min.png");?>" alt="BangZ Logo" width="200" height="200" />
+        <img src="<?php _e(cdn("logo-min.png"));?>" alt="BangZ Logo" width="200" height="200" />
       </div>
       <div class="billboard-text">
         <div class="billboard-text-border-top"></div>
@@ -45,8 +44,6 @@ $this->need("header.php");
     </div>
   </section>
 <?php endif;?>
+<?php } ?>
 <?php $this->need("archive.php"); ?>
-<?php
-$this->need("footer.php");
-}
-?>
+<?php $this->need("footer.php");?>

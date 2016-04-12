@@ -24,8 +24,8 @@
   <script type="text/javascript" src="//cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <?php $this->footer();?>
-  <script type="text/javascript" src="<?php $this->options->themeUrl('js/main.js');?>"></script>
   <script type="text/javascript" src="<?php $this->options->themeUrl('js/text-autospace.min.js');?>"></script>
+  <script type="text/javascript" src="<?php $this->options->themeUrl('js/main.js');?>"></script>
 </body>
 </html>
 <?php } ?>
