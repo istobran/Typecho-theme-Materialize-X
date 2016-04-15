@@ -1,6 +1,6 @@
 <aside id="sidebar" class="easeChange clearfix" <?php if(is_index($this->options->siteUrl)) {_e('style="display:none;"');} ?>>
   <div class="avatar">
-    <img src="<?php _e(cdn("logo-min.png"));?>" alt="BangZ" width="150" height="150">
+    <a href="<?php $this->options->siteUrl("index.php/page/1"); ?>"><img src="<?php _e(cdn("logo-min.png"));?>" alt="BangZ" width="150" height="150"></a>
   </div>
   <div class="name">
     <?php _e("BangZ 梦工厂"); ?>

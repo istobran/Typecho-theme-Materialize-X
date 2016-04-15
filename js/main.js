@@ -75,11 +75,6 @@ $("#link-article").click(function() {
   });
 });
 
-// 回到首页
-$(".avatar img").click(function() {
-  location.href="http://bangz.me";
-});
-
 // 文章标题下划线特效
 var u_effect = ( function() {     // 这种闭包方法比前面的 json 方法要好用得多
   var flag = true;   // 使用flag防止打断
@@ -166,7 +161,6 @@ var ripple_effect = (function() {
 }());
 ripple_effect.start();
 $(document).ready(function(){
-    window.auto_space(window, window.jQuery, undefined);
     $.pjax({
         selector: "a[href^='http://bangz.me']",
         container: '#pjax-container', //内容替换的容器
@@ -175,30 +169,6 @@ $(document).ready(function(){
         storage: true,  //是否使用本地存储
         callback: function(status){
           u_effect.start();
-          // 重新启用text-autospace
         }
     });
-    //绑定跳转开始事件
-    // $(".ajaxdiv").bind("pjax.start",
-    //      function() {
-    //         $(".ajaxdiv").css("opacity","0.6");
-    //         $(".spinner").css("opacity","1");
-    //         $(".spinner").show();
-    //  });
-    //绑定跳转结束事件
-    // $(".ajaxdiv").bind("pjax.end",
-    //      function() {
-    //         $(".spinner").hide();
-    //         $(".ajaxdiv").css("opacity","1");
-    //         // Main
-    //         initHeader();
-    //         addListeners();
-    //         if (navigator.userAgent.indexOf('Firefox') >= 0){
-    //             document.documentElement.scrollTop=120;
-    //         }
-    //         else
-    //         {
-    //            $('body').animate({scrollTop: 120});
-    //         }
-    //  });
 });

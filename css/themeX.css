@@ -562,7 +562,6 @@ footer .container>div {
   .avatar img {
     width: inherit;
     height: inherit;
-    cursor: pointer;
   }
   .name {
     display: inline-block;
