@@ -49,14 +49,6 @@ a, a:hover, a:active, a:visited, a:link {
 li {
   list-style: none;
 }
-.post-content img {
-  max-width:700px;
-}
-.post-content p {
-  margin: 0;
-  color: #888;
-  font-size: 16px;
-}
 .billboard {
   position: relative;
   margin: 0;
@@ -235,13 +227,30 @@ li {
 .posts {
   padding-top: 80px;
 }
+.posts-v2 {
+  padding-top: 0;
+}
+.posts-v2 .container {
+  max-width: 1050px;
+}
+.post-footer-tags {
+  padding: 0 3.5em;
+}
+.post-footer-tags a {
+  padding: 2px .5em;
+  display: inline-block;
+  border: 1px solid #327D81;
+  color: #327D81;
+  border-radius: 2px;
+  margin: 0 .2em;
+}
 .toolbar {
   max-width: 15%;
   float: left;
   padding: 15px 0 15px 15px;
 }
 article.post-body {
-  margin: 8px 4em 55px;
+  margin: 8px 4em 30px;
   padding: 8px;
   background-color: #fdfdfd;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
@@ -296,6 +305,27 @@ article.post-body {
 .post-content {
   border-top: 1px solid rgba(0,0,0,.1);
   padding: 16px 28px;
+  overflow: hidden;
+}
+.post-content img {
+  max-width:700px;
+}
+.post-content p {
+  margin: 0;
+  color: #888;
+  font-size: 16px;
+}
+.post-content-v2 {
+  padding: 16px 28px;
+  overflow: hidden;
+}
+.post-content-v2 img {
+  max-width:700px;
+}
+.post-content-v2 p {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
 }
 .post-info {
   padding: 16px 8px;
@@ -323,6 +353,40 @@ article.post-body {
   height: 2px;
   background: #000;
   overflow: "hidden";
+}
+.post-title-v2 {
+  padding: 10px 15px 10px 40px;
+}
+.post-title-v2 h1 {
+  line-height: 40px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: #327D81;
+  font-family: "Helvetica Neue","Hiragino Sans GB",Arial,"微软雅黑",sans-serif;
+}
+.post-title-v2 h1 a {
+  display: block;
+}
+.post-title-v2 h3.post-meta {
+  color: #999;
+  font-size: 11px;
+  padding: 6px .5em;
+}
+.post-title-v2 h3.post-meta a {
+  color: #327D81;
+}
+.post-footer-spliter {
+  border-bottom: 1px solid #e2e2e2;
+}
+.post-btn-group {
+  position: relative;
+  text-align: center;
+}
+.post-btn-group>span {
+  display: inline-block;
+}
+.post-btn-group span.btn-middle {
+  position: absolute;
 }
 .author-info {
   float: right;

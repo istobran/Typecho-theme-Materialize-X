@@ -160,15 +160,17 @@ var ripple_effect = (function() {
   };
 }());
 ripple_effect.start();
-$(document).ready(function(){
-    $.pjax({
-        selector: "a[href^='http://bangz.me']",
-        container: '#pjax-container', //内容替换的容器
-        show: 'slide',  //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
-        cache: false,  //是否使用缓存
-        storage: true,  //是否使用本地存储
-        callback: function(status){
-          u_effect.start();
-        }
-    });
-});
+
+// 暂时禁用 pjax，因为存在一些无法解决问题
+// $(document).ready(function(){
+//     $.pjax({
+//         selector: "a[href^='http://bangz.me']",
+//         container: '#pjax-container', //内容替换的容器
+//         show: 'slide',  //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
+//         cache: false,  //是否使用缓存
+//         storage: true,  //是否使用本地存储
+//     });
+//     $(document).on('pjax:complete', function() {
+//       u_effect.start();
+//     });
+// });
