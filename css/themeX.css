@@ -376,17 +376,68 @@ article.post-body {
   color: #327D81;
 }
 .post-footer-spliter {
+  position: relative;
   border-bottom: 1px solid #e2e2e2;
+  margin: 1em 0;
 }
 .post-btn-group {
-  position: relative;
+  position: absolute;
   text-align: center;
+  word-spacing: -6px;
+  margin-top: -1em;
+  left: 50%;
+  transform: translateX(-50%) !important;
+  -o-transform: translateX(-50%) !important;
+  -moz-transform: translateX(-50%) !important;
+  -ms-transform: translateX(-50%) !important;
+  -webkit-transform: translateX(-50%) !important;
 }
 .post-btn-group>span {
   display: inline-block;
 }
+.post-btn-group>span a {
+  display: block;
+  color: white;
+}
 .post-btn-group span.btn-middle {
   position: absolute;
+  top: -62%;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  transform: translateX(-50%) !important;
+  -o-transform: translateX(-50%) !important;
+  -moz-transform: translateX(-50%) !important;
+  -ms-transform: translateX(-50%) !important;
+  -webkit-transform: translateX(-50%) !important;
+}
+.post-btn-group span.btn-middle a {
+  border: 3px solid #fff;
+  background: red;
+  width: 4em;
+  height: 4em;
+  border-radius: 9999px;
+}
+.post-btn-group span.btn-middle ul {
+  padding-top: 0.25em;
+}
+.post-btn-group span.btn-middle li:first-child {
+  font-size: 1.5em;
+}
+.post-btn-group span.btn-left a {
+  width: 6em;
+  height: 2em;
+  line-height: 2em;
+  background: orange;
+  padding-right: 2em;
+  border-radius: 3px 0 0 3px;
+}
+.post-btn-group span.btn-right a {
+  width: 6em;
+  height: 2em;
+  line-height: 2em;
+  background: green;
+  padding-left: 2em;
+  border-radius: 0 3px 3px 0;
 }
 .author-info {
   float: right;

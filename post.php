@@ -46,15 +46,6 @@
           <span class="btn-right"><a href="javascript:void(0);">收藏</a></span>
         </div>
       </div>
-<!--
-      ----分隔线----
-      评论区
-      <p class="tags"><?php _e('标签：');?>
-          <?php
-foreach ($this->tags as $value) {
-_e(' <a href="' . $value['permalink'] . '"><span  class="label label-success">' . $value['name'] . '<span></a> ');
-}
-?> -->
       </p>
     </div>
   </div>
