@@ -71,6 +71,11 @@ $("#link-article").click(function() {
     $(".billboard").remove();
     $("#sidebar").fadeIn(100);
     $(document).scrollTop(0);
+    if (!!(window.history && history.pushState)){
+      // 支持History API
+      var first_page_url = $(".current a")[0].href;
+      history.pushState(null, null, first_page_url);
+    }
     next();
   });
 });
