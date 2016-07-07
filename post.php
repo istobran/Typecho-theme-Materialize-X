@@ -36,7 +36,7 @@
         <div class="post-btn-group">
           <span class="btn-left"><a href="javascript:void(0);">打赏</a></span>
           <span class="btn-middle">
-            <a href="javascript:void(0);">
+            <a href="javascript:void(0);" title="点赞">
               <ul>
                 <li><i class="fa fa-heart"></i></li>
                 <li>123</li>
@@ -46,7 +46,7 @@
           <span class="btn-right"><a href="javascript:void(0);">收藏</a></span>
         </div>
       </div>
-      </p>
+      <?php $this->need('comments.php');?>
     </div>
   </div>
   <?php $this->need("sidebar.php"); ?>

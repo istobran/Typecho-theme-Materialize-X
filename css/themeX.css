@@ -629,6 +629,21 @@ footer .container>div {
 .group-item ul li.active a {
   background-color: rgba(225, 225, 225, 0.5);
 }
+.comments {
+  margin: 3em 2em 0;
+}
+.comments-heading {
+}
+.comments-title {
+  padding: 5px;
+  display: inline-block;
+  font-weight: normal;
+  border-bottom: 2px solid #0B575B;
+}
+.comments-title-underline {
+  margin-top: -2px;
+  border-top: 2px solid #e2e2e2;
+}
 @media (max-width: 1024px) {  /* 边栏自适应窗口大小 */
   .author-info {
     display: none;
